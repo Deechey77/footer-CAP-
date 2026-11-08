@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #702129;
+    color: white;
+}
+
+.footer-container {
+    width: 100%;
+    min-height: 259px;
+    background-color: #702129;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #8d3cbd;
+}
+
+/* Binary background pattern */
+.footer-container::before {
+    content: "0101 1100 1010 0011 1110 0101 1100 1010 0011 1110 0101 1100 1010 0011 1110";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 4px;
+    line-height: 29px;
+    word-spacing: 5px;
+    color: rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    pointer-events: none;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 1fr;
+    padding: 40px 20px 30px;
+    min-height: 207px;
+    gap: 20px;
+}
+
+/* Column headings */
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* Number system text */
+.number-systems {
+    margin-top: 12px;
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* Logic gate buttons */
+.gate-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    max-width: 250px;
+}
+
+.gate-buttons a {
+    display: inline-block;
+    border: 1px solid #d9c4c4;
+    border-radius: 5px;
+    padding: 3px 9px;
+    font-size: 11px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.gate-buttons a:hover {
+    background-color: white;
+    color: #702129;
+}
+
+/* Copyright section */
+.copyright {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(50, 10, 15, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        padding: 25px 15px;
+        gap: 25px;
+    }
+
+    .footer-column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column:last-child {
+        grid-column: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="footer-container">
+
+    <div class="footer-content">
+
+        <!-- First Column -->
+        <div class="footer-column">
+            <h3>CAP Project</h3>
+
+            <p>
+                <a href="#">Digital number systems and logic gates</a>
+            </p>
+
+            <div class="number-systems">
+                BIN • OCT • DEC • HEX
+            </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="footer-column">
+            <h3>Explore</h3>
+
+            <p><a href="#">Number systems</a></p>
+            <p><a href="#">Logic gates</a></p>
+            <p><a href="#">Truth tables</a></p>
+            <p><a href="#">Converter</a></p>
+        </div>
+
+        <!-- Third Column -->
+        <div class="footer-column">
+            <h3>Logic gates</h3>
+
+            <div class="gate-buttons">
+                <a href="#">AND</a>
+                <a href="#">OR</a>
+                <a href="#">NOT</a>
+                <a href="#">NAND</a>
+                <a href="#">NOR</a>
+                <a href="#">XOR</a>
+                <a href="#">XNOR</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="copyright">
+        © 2026 CAP Project. All rights reserved.
+    </div>
+
+</div>
+
+</body>
+</html>
